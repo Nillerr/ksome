@@ -10,7 +10,7 @@ To install KSome in Micronaut we typically require the following 3 dependencies:
 
 ```kotlin
 dependencies {
-    val ksome_version = "1.0.0-SNAPSHOT"
+    val ksome_version = "1.0.0"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     implementation("io.github.nillerr:ksome-micronaut-jackson:$ksome_version")
     implementation("io.github.nillerr:ksome-micronaut-validation:$ksome_version")
@@ -19,11 +19,13 @@ dependencies {
 
 ## Installation (Spring)
 
-To install KSome in Spring we typically require the following 3 dependencies:
+> :warning: **Spring will be supported in an upcoming version**
+
+To install KSome in Spring we typically require the following 3 dependencies: 
 
 ```kotlin
 dependencies {
-    val ksome_version = "1.0.0-SNAPSHOT"
+    val ksome_version = "1.0.0"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     implementation("io.github.nillerr:ksome-spring-jackson:$ksome_version")
     implementation("io.github.nillerr:ksome-spring-validation:$ksome_version")
@@ -36,7 +38,7 @@ To install KSome in a library we typically require the following 2 dependencies:
 
 ```kotlin
 dependencies {
-    val ksome_version = "1.0.0-SNAPSHOT"
+    val ksome_version = "1.0.0"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     implementation("io.github.nillerr:ksome-jakarta-validation:$ksome_version")
 }
