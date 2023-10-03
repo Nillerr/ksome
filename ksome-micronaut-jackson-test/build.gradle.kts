@@ -3,9 +3,6 @@ import io.micronaut.gradle.MicronautTestRuntime
 
 plugins {
     id("io.micronaut.application")
-
-    kotlin("kapt")
-    kotlin("plugin.allopen")
 }
 
 micronaut {

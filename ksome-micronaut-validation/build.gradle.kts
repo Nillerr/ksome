@@ -1,5 +1,4 @@
 plugins {
-    kotlin("plugin.allopen")
     kotlin("kapt")
 
     id("io.micronaut.library")
