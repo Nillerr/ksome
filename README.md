@@ -12,7 +12,7 @@ __build.gradle.kts__
 
 ```kotlin
 dependencies {
-    val ksome_version = "0.0.1"
+    val ksome_version = "0.0.2"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     
     runtimeOnly("io.github.nillerr:ksome-micronaut-jackson:$ksome_version")
@@ -38,7 +38,7 @@ __build.gradle.kts__
 
 ```kotlin
 dependencies {
-    val ksome_version = "0.0.1"
+    val ksome_version = "0.0.2"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     
     runtimeOnly("io.github.nillerr:ksome-spring-jackson:$ksome_version")
@@ -54,7 +54,7 @@ __build.gradle.kts__
 
 ```kotlin
 dependencies {
-    val ksome_version = "0.0.1"
+    val ksome_version = "0.0.2"
     implementation("io.github.nillerr:ksome-core:$ksome_version")
     implementation("io.github.nillerr:ksome-jackson:$ksome_version")
     implementation("io.github.nillerr:ksome-jakarta-validation:$ksome_version")
