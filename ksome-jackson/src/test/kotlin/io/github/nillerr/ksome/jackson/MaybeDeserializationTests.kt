@@ -1,20 +1,20 @@
 package io.github.nillerr.ksome.jackson
 
-import io.github.nillerr.ksome.core.Some
+import io.github.nillerr.ksome.core.Maybe
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class SomeDeserializationTests {
+class MaybeDeserializationTests {
     companion object {
         private val mapper = ObjectMapper()
             .findAndRegisterModules()
-            .registerSomeModule()
+            .registerMaybeModule()
     }
 
     data class Container(
-        val name: Some<String?>? = null,
-        val age: Some<Int>? = null,
+        val name: Maybe<String?>? = null,
+        val age: Maybe<Int>? = null,
     )
 
     @Test
@@ -26,7 +26,7 @@ class SomeDeserializationTests {
         val output = mapper.readValue(input, Container::class.java)
 
         // Then
-        assertEquals(Container(name = Some("Chrissy")), output)
+        assertEquals(Container(name = Maybe("Chrissy")), output)
     }
 
     @Test
@@ -38,7 +38,7 @@ class SomeDeserializationTests {
         val output = mapper.readValue(input, Container::class.java)
 
         // Then
-        assertEquals(Container(name = Some(null)), output)
+        assertEquals(Container(name = Maybe(null)), output)
     }
 
     @Test

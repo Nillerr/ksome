@@ -20,6 +20,8 @@ dependencies {
     implementation(project(":ksome-jackson"))
 
     // Micronaut
+    // This is required if I write another BeanIntrospectionModule
+    // implementation("io.micronaut:micronaut-jackson-databind")
     kapt("io.micronaut:micronaut-inject-java")
 
     // Jackson

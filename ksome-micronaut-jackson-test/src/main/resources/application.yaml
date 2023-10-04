@@ -1,0 +1,3 @@
+jackson:
+  # Micronauts experimental Jackson Bean Introspection must be disabled to properly support `Maybe<T>` in PATCH requests
+  bean-introspection-module: false

@@ -18,6 +18,7 @@ micronaut {
 
 allOpen {
     annotation("io.micronaut.http.annotation.Controller")
+    annotation("io.micronaut.http.annotation.Produces")
     preset("micronaut")
 }
 
@@ -32,6 +33,10 @@ dependencies {
 
     // Micronaut
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation("io.micronaut:micronaut-validation")
+
+    kapt("io.micronaut:micronaut-inject-java")
+    kaptTest("io.micronaut:micronaut-inject-java")
 
     // Kotlin
     implementation(kotlin("reflect"))
@@ -46,5 +51,4 @@ dependencies {
     // Micronaut
     testImplementation("io.micronaut:micronaut-http-client")
 
-    kaptTest("io.micronaut:micronaut-inject-java")
 }

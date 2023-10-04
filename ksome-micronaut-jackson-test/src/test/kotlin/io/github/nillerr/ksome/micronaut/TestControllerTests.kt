@@ -69,6 +69,7 @@ class TestControllerTests {
         val requestBody = json(
             """
                 {
+                  "name": "Nicklas",
                   "age": null
                 }
             """.trimIndent()
@@ -124,7 +125,7 @@ class TestControllerTests {
             .accept("application/json")
 
         // When
-        val responseBody = client.toBlocking().retrieve(httpRequest)
+        val responseBody = runLogging { client.toBlocking().retrieve(httpRequest) }
 
         // Then
         assertEqualsJson(requestBody, responseBody)
@@ -146,7 +147,29 @@ class TestControllerTests {
             .accept("application/json")
 
         // When
-        val responseBody = client.toBlocking().retrieve(httpRequest)
+        val responseBody = runLogging { client.toBlocking().retrieve(httpRequest) }
+
+        // Then
+        assertEqualsJson(requestBody, responseBody)
+    }
+
+    @Test
+    fun `given valid partial null input, request is returned`() {
+        // Given
+        val requestBody = json(
+            """
+                {
+                  "name": null
+                }
+            """.trimIndent()
+        )
+
+        val httpRequest = HttpRequest.PATCH("/", requestBody)
+            .contentType("application/json")
+            .accept("application/json")
+
+        // When
+        val responseBody = runLogging { client.toBlocking().retrieve(httpRequest) }
 
         // Then
         assertEqualsJson(requestBody, responseBody)
