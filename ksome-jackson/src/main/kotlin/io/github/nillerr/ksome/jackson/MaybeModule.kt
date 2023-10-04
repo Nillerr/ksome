@@ -1,11 +1,9 @@
 package io.github.nillerr.ksome.jackson
 
-import io.github.nillerr.ksome.core.Maybe
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.module.SimpleModule
-import io.github.nillerr.ksome.core.None
-import io.github.nillerr.ksome.core.Some
+import io.github.nillerr.ksome.core.Maybe
 
 private class MaybeModule : SimpleModule() {
     init {

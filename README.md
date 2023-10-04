@@ -1,4 +1,4 @@
-# KMaybe - Maybe for Kotlin
+# KSome - Maybe for Kotlin
 
 Provides the `Maybe<T>` type used for patching values in `PATCH` APIs. The `Maybe<T>` type is like an `Optional<T>` that 
 allows nullable values while carrying their nullability in Kotlin. It aims to solve the problem of detecting the 

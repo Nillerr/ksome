@@ -115,14 +115,14 @@ subprojects {
                     artifact(dokkaHtmlJar)
 
                     pom {
-                        name.set("OOXML for Kotlin")
-                        description.set("Provides means of generating OOXML documents using Kotlin data classes.")
-                        url.set("https://github.com/Nillerr/ooxml-kotlin")
+                        name.set("KSome")
+                        description.set("Maybe<T> for Kotlin")
+                        url.set("https://github.com/Nillerr/ksome")
 
                         licenses {
                             license {
                                 name.set("MIT")
-                                url.set("https://github.com/Nillerr/ooxml-kotlin/LICENSE")
+                                url.set("https://github.com/Nillerr/ksome/LICENSE")
                             }
                         }
 
@@ -135,7 +135,7 @@ subprojects {
                         }
 
                         scm {
-                            url.set("https://github.com/Nillerr/ooxml-kotlin")
+                            url.set("https://github.com/Nillerr/ksome")
                         }
                     }
                 }
